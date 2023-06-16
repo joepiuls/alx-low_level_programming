@@ -1,10 +1,10 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
+#include <stdio.h>
 /* 
-main - for entry point
-return - for success
+*main - for entry point
+*return - for success
  */
 int main(void)
 {
