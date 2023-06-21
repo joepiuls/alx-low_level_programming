@@ -1,17 +1,23 @@
 #include "main.h"
-/*
-*_isalpha checks if the number is an alphabet.
-*return - returns 1 if c is letter and 0 if otherwise.
-*/
+
+/**
+ * _isalpha - check if c is an alphabet.
+ *
+ * @c: is c an integer argument
+ *
+ * Return: Always 0.
+ */
+
 int _isalpha(int c)
 {
-	/*checks if the letter is an alphabet*/
-	if (c >= 'a' && c <= 'z')
+
+	if (c >= 97 && c <= 122)
 	{
 		return (1);
 	}
-	else
+	else if (c >= 65 && c <= 90)
 	{
-		return (0);
+		return (1);
 	}
+	return (0);
 }
