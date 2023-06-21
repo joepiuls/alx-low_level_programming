@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _isalpha - check if c is an alphabet.
+ * _isalpha - checks for alphabetic character.
  *
- * @c: is c an integer argument
+ * @c: is c an integer argument.
  *
  * Return: Always 0.
  */
@@ -19,5 +19,8 @@ int _isalpha(int c)
 	{
 		return (1);
 	}
-	return (0);
+	else
+	{
+		return (0);
+	}
 }
