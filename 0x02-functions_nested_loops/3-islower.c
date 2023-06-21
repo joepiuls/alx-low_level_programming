@@ -4,7 +4,7 @@
 * return 1 if lowercase is true
 * return 0 iflowercase is false
 */
-int _islowerw(int c)
+int _islower(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{
