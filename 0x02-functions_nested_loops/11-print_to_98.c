@@ -7,7 +7,8 @@
  */
 void print_to_98(int n)
 {
-for (int i = 0; i <= n; i++)
+int i;
+for (i = 0; i <= n; i++)
 {
 printf("%d, ", i);
 }
