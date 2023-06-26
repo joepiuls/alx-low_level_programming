@@ -16,9 +16,9 @@ int main(void)
 	time_t t;
 
 	srand((int) time(&t));
-	while (ascii > 126)
+	while (ascii > 26)
 	{
-		random = rand() % 126;
+		random = rand() % 26;
 		passwd[i] = random;
 		ascii -= random;
 		i++;
