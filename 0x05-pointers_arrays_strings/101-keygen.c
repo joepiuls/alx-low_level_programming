@@ -21,7 +21,7 @@ int main(void)
 	{
 		pass[i] = rand() % 78;
 		sm += (pass[i] + '0');
-		printf(pass[i]);
+		printf("%d", pass[i]);
 		if ((2772 - sm) - '0' < 78)
 		{
 			n = 2772 - sm - '0';
