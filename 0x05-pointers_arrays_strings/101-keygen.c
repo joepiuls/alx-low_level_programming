@@ -9,10 +9,10 @@
  */
 int main(void)
 {
-	char *passwd = malloc(65 * sizeof(char));
+	char *passwd = malloc(15 * sizeof(char));
 	int i;
 
-	for (i = 0; i <= 65; i++)
+	for (i = 0; i <= 15; i++)
 	{
 
 	int character = rand() % 94 + 33;
