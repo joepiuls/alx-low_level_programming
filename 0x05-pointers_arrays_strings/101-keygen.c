@@ -22,5 +22,5 @@ int main(void)
 	}
 
 	printf("%s", passwd);
-	return (passwd);
+	return (0);
 }
