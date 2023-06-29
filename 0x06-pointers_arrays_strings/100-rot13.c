@@ -7,20 +7,30 @@
  */
 char *rot13(char *str)
 {
-	int i;
+	char *r = str;
+  	int i;
 
-	for (i = 0; str[i] != '\0'; i++)
+  	for (i = 0; str[i] != '\0'; i++)
 	{
-		if ((*(str + i) >= 'a' && *(str + i) < 'n')
-				|| (*(str + i) >= 'A' && *(str + i) < 'N'))
+    		int c = str[i];
+
+    		if (c >= 'a' && c <= 'z')
 		{
-			*(str + i) += 13;
-		}
-		else if ((*(str + i) >= 'n' && *(str + i) <= 'z')
-				|| (*(str + i) >= 'N' && *(str + i) <= 'Z'))
+      			c = c + 13;
+      			if (c > 'z')
+			{
+        			c -= 26;
+      			}
+    		}
+		else if (c >= 'A' && c <= 'Z')
 		{
-			*(str + i) -= 13;
-		}
+      			c = c + 13;
+      			if (c > 'Z')
+			{
+        			c -= 26;
+      			}
+    		}
+    		r[i] = c;
 	}
 	return (str);
 }
