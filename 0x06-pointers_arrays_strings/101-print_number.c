@@ -30,7 +30,7 @@ void print_number(int n)
 
 	if (n < 0)
 	{
-		_putchar('-');
+		putchar('-');
 		n *= -1;
 	}
 
@@ -44,7 +44,7 @@ void print_number(int n)
 
 		while (power >= 1)
 		{
-			_putchar((n / power) + '0');
+			putchar((n / power) + '0');
 			n %= power;
 			power /= 10;
 		}
