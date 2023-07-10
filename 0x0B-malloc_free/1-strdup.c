@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
 /**
  * _strdup - returns a pointer to a newly allocated space in memory.
  * @str: string.
@@ -9,16 +9,16 @@
 char *_strdup(char *str)
 {
 	char *nstr;
-	/* use of unsigned int */
 	unsigned int i, j;
 
 	if (str == NULL)
 		return (NULL);
 
-	for (i == 0; str[i] != '\0'; i++)
-	{
-	}
-	nstr = malloc(sizeof(char) * (i + 1));
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	nstr = (char *)malloc(sizeof(char) * (i + 1));
+
 	if (nstr == NULL)
 		return (NULL);
 
