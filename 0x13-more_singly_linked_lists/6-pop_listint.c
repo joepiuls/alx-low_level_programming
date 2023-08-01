@@ -1,4 +1,4 @@
-nclude "lists.h"
+#include "lists.h"
 #include "stdlib.h"
 /**
  * pop_listint - pop the first element in a linked list.
