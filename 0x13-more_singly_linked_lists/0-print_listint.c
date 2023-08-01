@@ -18,5 +18,5 @@ size_t print_listint(const listint_t *h)
 		ptr++;
 		point = point->next;
 	}
-	return (cntr);
+	return (ptr);
 }
