@@ -8,15 +8,14 @@
 
 size_t listint_len(const listint_t *h)
 {
-        const listint_t *temp;
-        unsigned int node = 0;
+	const listint_t *temp;
+	unsigned int node = 0;
 
-        temp = h;
-        while (temp)
-        {
-                node += 1;
-                temp = temp->next;
-        }
-        return (node);
+	temp = h;
+	while (temp)
+	{
+		node += 1;
+		temp = temp->next;
+	}
+	return (node);
 }
-
