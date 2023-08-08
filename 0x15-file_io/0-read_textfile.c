@@ -30,6 +30,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (wrt != fread)
 		return (0);
 	free(buffer);
-	close(files);
+	close(fls);
 	return (fread);
 }
