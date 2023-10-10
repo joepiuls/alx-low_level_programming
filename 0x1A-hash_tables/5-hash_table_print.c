@@ -7,33 +7,27 @@
  * Description: Key/value pairs are printed in the order
  *              they appear in the array of the hash table.
  */
+
 void hash_table_print(const hash_table_t *ht)
 {
-	hash_node_t *node;
-	unsigned long int j;
-	unsigned char flag = 0;
+	unsigned long int i;
+	hash_node_t *tmp;
+	char flag = 0; /* 0 while no data has been printed yet */
 
-	if (ht == NULL)
+	if (ht == NULL || ht->array == NULL)
 		return;
-
 	printf("{");
-	for (j = 0; j < ht->size; j++)
+	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[j] != NULL)
+		tmp = ht->array[i];
+		while (tmp != NULL)
 		{
 			if (flag == 1)
 				printf(", ");
-
-			node = ht->array[j];
-			while (node != NULL)
-			{
-				printf("'%s': '%s'", node->key, node->value);
-				node = node->next;
-				if (node != NULL)
-					printf(", ");
-			}
+			printf("'%s': '%s'", tmp->key, tmp->value);
 			flag = 1;
+			tmp = tmp->next;
 		}
 	}
-	printf("}\n");
+	printf("{}\n");
 }
